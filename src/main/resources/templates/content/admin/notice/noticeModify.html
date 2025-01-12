@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/adminLayout.html}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin::Notice</title>
+    <link rel="stylesheet"  th:href="@{/css/admin/adminmodify.css}">
+
+</head>
+<body>
+<th:block layout:fragment="content">
+                        <div id="admin_service">    
+                            <section>
+                                <th:block th:replace="~{content/admin/admin_gate}"></th:block>
+
+                                <section id="admin_navi">
+                                        <p>고객센터</p>
+                                        <p>
+                                            <a href="#">HOME</a>
+                                            <span>></span>
+                                            <a href="#">고객센터</a>
+                                            <span>></span>
+                                            <a href="#">자주묻는질문</a>
+                                        </p>
+                                </section>
+                                <div class="write-box">
+                                    <aside id="adminAside"></aside>
+                                    <div class="coment-box">
+                                        <form class="write-coment">
+                                            <div class="write-table">
+                                                <div class="write-type">
+                                                    <div>유형</div>
+                                                    <div>
+                                                        <td>
+                                                            <select class="first_choice">
+                                                                <option value="" disabled selected>유형 선택</option>
+                                                                <option value="1">가입</option>
+                                                                <option value="2">취소/반품/교환</option>
+                                                                <option value="3">주문/결제</option>
+                                                                <option value="4">쿠폰/이벤트</option>
+                                                            </select>
+                                                        </td>
+                                                    </div>
+                                                </div>
+                                                <div class="write-title">
+                                                    <div>제목</div>
+                                                    <div>
+                                                        <input type="text" placeholder="제목을 입력하세요">
+                                                    </div>
+                                                </div>
+                                                <div class="write-input">
+                                                    <div>내용</div>
+                                                    <div>
+                                                        <textarea class="faq-contents" oninput="autoResize(this)"></textarea>
+                                                    </div>
+                                                </div>
+                                        </form>
+                                        <div class="write-btn-controoler">
+                                            <a class="write-btn-cancel" href="#">취소하기</a>
+                                            <a class="write-btn-modify" href="#">수정하기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+</th:block>

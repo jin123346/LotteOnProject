@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/adminLayout.html}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin::Notice</title>
+
+</head>
+<body>
+<th:block layout:fragment="content">
+            <div id="admin_service">    
+                <section>
+                    <th:block th:replace="~{content/admin/admin_gate}"></th:block>
+
+                    <section id="admin_navi">
+                            <p>관리자 메인</p>
+                            <p><a href="#">HOME</a> > 관리자 메인</p>
+                    </section>
+
+                    <div class="admin-in">
+                      <div class="admin-view">
+                        <div class="admin-type">
+                          <div class="type-box1">유형</div>
+                          <div class="type-view">회원 - 가입</div>
+                        </div>
+                        <div class="admin-title">
+                          <div class="title-box">제목</div>
+                          <div class="title-view">개인회원과 법인회원에 차이가 있나요?</div>
+                        </div>
+                        <div class="admin-content">
+                          <div class="content-box">내용</div>
+                          <div class="content-view">개인회원은 본인인증 , 법인회원은<br> 사업자 등록번호를 기준 으로 사업자인증 후 가입가능합니다.<br>
+                            개인회원에서 법인회원 (사업자회원) 으로 <br>전환은 불가하므로 법인회원 (사업자회원) 전환은 신규가입으로 진행을 해야합니다.
+                            개인회원에서 법인회원 (사업자회원) 으로 <br>전환은 불가하므로 법인회원 (사업자회원) 전환은 신규가입으로 진행을 해야합니다.
+                            개인회원에서 법인회원 (사업자회원) 으로 <br>전환은 불가하므로 법인회원 (사업자회원) 전환은 신규가입으로 진행을 해야합니다.
+                            개인회원에서 법인회원 (사업자회원) 으로 <br>전환은 불가하므로 법인회원 (사업자회원) 전환은 신규가입으로 진행을 해야합니다.
+                            개인회원에서 법인회원 (사업자회원) 으로 <br>전환은 불가하므로 법인회원 (사업자회원) 전환은 신규가입으로 진행을 해야합니다.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="btn-controller">
+                        <a href="#" class="delete-btn">삭제</a>
+                        <a th:href="@{/admin/notice/modify(no=1)}" class="register-btn">수정</a>
+                        <a href="#" class="list-btn">목록</a>
+                      </div>
+                    </div>
+
+
+                </section>
+</th:block>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/adminLayout.html}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin::Main</title>
+    <link rel="stylesheet" th:href="@{/css/admin/adminindex.css}">
+    <script   src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<th:block layout:fragment="content">
+            <div id="admin_service">
+                <section>
+                    <th:block th:replace="~{content/admin/admin_gate}"></th:block>
+
+                    <section id="admin_navi">
+                            <p>관리자 메인</p>
+                            <p><a href="#">HOME</a> > 관리자 메인</p>
+                    </section>
+                    <div class="graph">
+                        <h2>집계현황</h2>
+                        <canvas id="barChart" width="450" height="200"></canvas>
+                        <canvas id="pieChart" width="450" height="200"></canvas>
+                    </div>
+                    <article id="admin_status">
+                        <table class="a_status">
+                            <tr>
+                                <th colspan="10">운영현황</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p>주문건수</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td colspan="2">
+                                    <p>주문금액</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td colspan="2">
+                                    <p>회원가입</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td colspan="2">
+                                    <p>방문자 수</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td colspan="2">
+                                    <p>신규 게시물</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>pc</p>
+                                    <p>mobile</p>
+                                </td>
+                                <td>
+                                    <p>60</p>
+                                    <p>70</p>
+                                </td>
+                                <td>
+                                    <p>pc</p>
+                                    <p>mobile</p>
+                                </td>
+                                <td>
+                                    <p>60</p>
+                                    <p>70</p>
+                                </td>
+                                <td>
+                                    <p>pc</p>
+                                    <p>mobile</p>
+                                </td>
+                                <td>
+                                    <p>60</p>
+                                    <p>70</p>
+                                </td>
+                                <td>
+                                    <p>pc</p>
+                                    <p>mobile</p>
+                                </td>
+                                <td>
+                                    <p>60</p>
+                                    <p>70</p>
+                                </td>
+                                <td>
+                                    <p>pc</p>
+                                    <p>mobile</p>
+                                </td>
+                                <td>
+                                    <p>60</p>
+                                    <p>70</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article id="order_status">
+                        <table class="o_status">
+                            <tr>
+                                <th colspan="5">주문현황</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>입금대기</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td>
+                                    <p>배송준비</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td>
+                                    <p>취소요청</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td>
+                                    <p>교환요청</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                                <td>
+                                    <p>반품요청</p><br>
+                                    <p><a href="#">300</a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article id="admin_notice_admin_inquire">
+                            <table class="admin_notice">
+                                <colgroup>
+                                    <col style="width: 750px">
+                                    <col style="width: 150px">
+                                </colgroup>
+                                <tr>
+                                    <th>공지사항</th>
+                                    <th><a href="#">전체보기</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
+                                    <td>22.10.31</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
+                                    <td>22.10.31</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
+                                    <td>22.10.31</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
+                                    <td>22.10.31</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
+                                    <td>22.10.31</td>
+                                </tr>
+                            </table>
+                            <table class="admin_inquire">
+                                <colgroup>
+                                    <col style="width: 600px">
+                                    <col style="width: 150px"> 
+                                    <col style="width: 150px"> 
+                                </colgroup>
+                                <tr>
+                                    <th>고객문의</th>
+                                    <th colspan="2"><a href="#">전체보기</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
+                                    <td>wlgus59**</td>
+                                    <td>20.12.11</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
+                                    <td>wlgus59**</td>
+                                    <td>20.12.11</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
+                                    <td>wlgus59**</td>
+                                    <td>20.12.11</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
+                                    <td>wlgus59**</td>
+                                    <td>20.12.11</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
+                                    <td>wlgus59**</td>
+                                    <td>20.12.11</td>
+                                </tr>
+                            </table>
+                    </article>  
+                </section>
+                <script th:src="@{/js/adminGraph.js}"></script>
+    </th:block>

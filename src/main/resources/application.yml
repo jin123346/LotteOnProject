@@ -1,0 +1,39 @@
+logging:
+    file:
+        name: /logs/lotteOn.log
+
+    level:
+        jdbc:
+            resultsettable: debug
+            sqlonly: debug
+            sqltiming: debug
+        org:
+            hibernate:
+                orm:
+                    jdbc:
+                        bind: trace
+                sql: debug
+        root: info
+        org.springframework.web: DEBUG
+server:
+    port: 8085
+    servlet:
+        context-path: /
+
+spring:
+    profiles:
+        active: default
+        include: local
+    application:
+        name: LotteOnProject-3조
+        version: ${version}
+
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: woo24465@gmail.com
+        password: mawj nxfq tiwx regc
+        properties:
+            mail.smtp.auth: true
+            mail.smtp.starttls.enable: true
+
